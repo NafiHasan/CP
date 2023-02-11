@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		// "Agila Theme",
+		"Agila Theme",
+		"Clang Format",
+		"ClangAutoComplete",
+		"CppFastOlympicCoding",
+		"Formatter",
+		"GitHub Theme",
+		"LSP",
+		"Monokai Dark",
+		"Monokai Extended",
+		"Monokai++",
+		"Package Control",
+		"PackageResourceViewer",
+		"SublimeAStyleFormatter",
+		"Theme - Dark Material",
+		"Theme - Darkmatter",
+		"Theme - Midnight",
+	],
+}
