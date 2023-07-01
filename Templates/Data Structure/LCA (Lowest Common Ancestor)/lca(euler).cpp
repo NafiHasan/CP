@@ -1,4 +1,8 @@
-// algo : first do dfs traversal and save the height along with the first time when a node is visited. also the euler tour.
+// algo : first do dfs traversal and save the height along with the first time when a node is visited. also the euler tour(DFS traversal tour).
+// a node with k children will appear k + 1 times. So total entries in euler tour will be 2*n-1.
+//to find the lca of nodes u and v, find the minimum depth node between the entries of u and v in euler tour using segment tree/sparse table
+//O(nlogn) time preprocessing and O(1) for each query
+
 #include <bits/stdc++.h>
 using namespace std;
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
