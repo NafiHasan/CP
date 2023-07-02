@@ -3,6 +3,9 @@
 // a node with k children will appear k + 1 times. So total entries in euler tour will be 2*n-1.
 //to find the lca of nodes u and v, find the minimum depth node between the entries of u and v in euler tour using segment tree/sparse table
 //O(nlogn) time preprocessing and O(1) for each query
+
+//call dfs first and then call process. 
+// 0-based node indexing is used. convert to 1 based if needed.
 const int N = 200005;
 int timer = 0;
 vector<int> edge[N], tin(N), tout(N);
@@ -37,7 +40,7 @@ void process() {
 		}
 	}
 }
-
+//returns the LCA in 0-based index.
 int FindLCA(int u, int v) {
 	int cur = u;
 	int Log = ceil(log2(n));
