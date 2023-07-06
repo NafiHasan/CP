@@ -15,6 +15,7 @@ void process(vector<int> a) {
 }
 
 //O(1)
+//0-based indexing
 int query(int l, int r) {
 	int lg = 31 - __builtin_clz(r - l + 1);  //taking largest log value which is not greater than the length
 	return min(table[lg][l], table[lg][r - (1 << lg) + 1]);

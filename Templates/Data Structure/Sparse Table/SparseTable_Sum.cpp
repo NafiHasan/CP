@@ -15,6 +15,7 @@ void process(vector<long long> a) {
 }
 
 //O(logn)
+//0-based indexing
 long long query(int l, int r) {
 	long long sum = 0;
 	for (int i=K; i>=0; i--){ // trying the biggest power of 2 which is not less than the current length
