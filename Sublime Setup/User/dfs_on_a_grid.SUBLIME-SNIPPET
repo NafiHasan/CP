@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+// dfs on a grid
+
+const int N = 505;
+int n, m; // row, column
+
+vector<string> grid(N);
+vector<vector<bool>> vis(N, vector<bool> (N));
+
+int dr[] = {0, 1, 0, -1};
+int dc[] = {1, 0, -1, 0};
+
+bool valid(int r, int c) {
+	if (r < 0 || r >= n || c < 0 || c >= m)return 0;
+	if (grid[r][c] == '#')return 0; // checking block
+	return 1;
+}
+
+void dfs(int r, int c) {
+	vis[r][c] = 1;
+
+	for (int i = 0; i < 4; i++) {
+		int rr = r + dr[i], cc = c + dc[i];
+		if (valid(rr, cc) && !vis[rr][cc]) {
+			dfs(rr, cc);
+		}
+	}
+}
+
+void clear_vis(){
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++) 
+			vis[i][j] = 0;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>griddfs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++, source.cpp, source.c, source.Cc</scope>
+</snippet>
